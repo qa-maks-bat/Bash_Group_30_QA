@@ -1,7 +1,9 @@
 # TERMINAL homework on QA Course by Vadim Ksendzov
 
 # Part 1:
-HW_1. The first part
+
+# HW_1. The first part
+
 Linux terminal (GitBash) commands
 
 Нужно уметь делать все пункты задания.
@@ -42,7 +44,8 @@ http://162.55.220.72:5005/terminal-hw-request
 
 # Part 2:
 
-Termial. HW_2
+# Termial. HW_2
+
 1. Сделать папку dir_1
  2. Зайти в папку dir_1
  3. Создать папку inner_dir_1
