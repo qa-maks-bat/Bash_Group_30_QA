@@ -1,6 +1,4 @@
-# GitBash_Terminal
-
-This is my 1st homework on QA Course by Vadim Ksendzov
+# TERMINAL homework on QA Course by Vadim Ksendzov
 
 # Part 1:
 HW_1. The first part
