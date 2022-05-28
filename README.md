@@ -1,6 +1,6 @@
-# QA Course by Vadim Ksendzov
+QA Course by Vadim Ksendzov
 
-# TERMINAL homework 1
+TERMINAL homework 1
 
 # HW_1. The first part
 
