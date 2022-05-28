@@ -1,0 +1,199 @@
+     Group_30_QA
+
+     HW_DZ1
+
+     Telegram: @maks_tbat 
+
+     Name: Maksim
+
+
+
+	 Hello, Mentor!
+	 
+	 This is my first homework.
+	 
+
+1) Посмотреть где я:
+     pwd
+
+2) Создать папку:
+     mkdir HW_30_QA/DZ1
+
+3) Зайти в папку:
+     cd HW_30_QA/DZ1/
+
+4) Создать 3 папки:
+     mkdir app1 app2 app3
+
+5) Зайти в любоую папку:
+     cd app1/
+
+6) Создать 5 файлов (3 txt, 2 json):
+     touch 1.txt 2.txt 3.txt 4.json 5.json
+
+7) Создать 3 папки:
+     mkdir app11 app12 app13
+
+8. Вывести список содержимого папки:
+     ls -la
+
+9) + Открыть любой txt файл:
+     vim 1.txt
+
+10) + написать туда что-нибудь, любой текст:
+      
+	 Press the "i" button to insert a text. 
+	  
+     Мне нравится тестирование ПО.
+     Я планирую стать профессиональным тестировщиком!
+     Для этого я прохожу курс тестирования ПО.
+     По окончании курса у меня будет достаточно знаний для старта в IT!
+     Спасибо большое Вадиму за возможность бесплатного обучения!
+      
+	 Press the "Esc" button to exit insert mode.
+
+11) + сохранить и выйти:
+     Write in a command line ":wq" and press the "Enter" button
+
+12) Выйти из папки на уровень выше:
+     cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку:
+     mv app1/{2.txt,3.txt} app2
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку:
+     cp app1/{4.json,5.json} app3
+
+15) Найти файл по имени:
+     find . -name "*.txt"
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает:
+    #вывод строк, сожержащих пробелы:
+     nl app1/1.txt | grep " "    
+    
+    #вывод строк, сожержащих слово "ПО":
+     nl app1/1.txt | grep ПО
+    
+    #вывод одной строки после вхождения "ПО":
+     nl app1/1.txt | grep -A1 ПО
+
+17) вывести несколько первых строк из текстового файла:
+     nl app1/1.txt | head -n2
+
+18) вывести несколько последних строк из текстового файла:
+     nl app1/1.txt | tail -n2
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает:
+     less -2 app1/1.txt
+	
+	 Press button "q" to quit "less" fuction.
+
+20) вывести дату и время:
+     date
+	
+	======================================
+	
+	
+#Задание* 
+
+	
+#1 Send the HTTP request over Terminal:
+	
+	$ curl http://162.55.220.72:5005/terminal-hw-request
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0   4327      0 --:--:-- --:--:-- --:--:--  4421{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+ 
+	======================================
+	
+	
+#2 Send the "Task_1" request over Terminal:
+
+$ curl "http://162.55.220.72:5005/get_method?name=maks_tbatr&age=41"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    28  100    28    0     0    360      0 --:--:-- --:--:-- --:--:--   363[
+  "maks_tbatr",
+  "41"
+]
+
+	======================================
+	
+	
+#3 Алгоритм исполнения пунктов 3 - 8, 13 с созданием скрипта:
+	
+     1) Open Git Bash;
+	
+     2) Write in a command line of the Git Bash shell "vim script_dz1.sh" and then press the "Enter" button;
+
+     3) Press the "i" button to enter the "Insert" mode (when you see an opened window);
+
+	 4) Write the following commands (into the opened window):
+
+         #!/bin/bash
+
+         echo 'Start'
+
+         mkdir script_DZ1
+         cd script_DZ1
+         mkdir app{1,2,3}
+         cd app1/
+         touch {1,2,3}.txt {4,5}.json
+         mkdir app{11,12,13}
+         ls -la
+         mv {2,3}.txt ../app2
+         ls -la ../app1 ../app2
+
+         echo 'Finish'
+		 
+	 5) Press the "Esc" button;
+	 
+	 6) Write in a command line of the opened window ":wq" and then press the "Enter" button;
+	 
+	 7) Write in a command line of the Git Bash shell "chmod ugo+x script_dz1.sh" and then press the "Enter" button;
+	 
+	 8) Write in a command line of the Git Bash shell "./script_dz1.sh" and then press the "Enter" button;
+	 
+	 9) Check the actual result by following the expected result (Unit 4).
+	
+	======================================
+	
+	
+#4 Ожидаемый результат (Expected Result):
+	
+1) Выведено сообщение на экран 'Start';
+	
+2) Создана директория script_DZ1;
+
+3) Произведен вход в директорию script_DZ1 (пункт 3 задания "Зайти в папку");
+
+4) В директории script_DZ1 создано три папки app1, app2 и app3 (пункт 4 задания "Создать три папки");
+
+5) Выполнен вход в папку app1 (пункт 5 задания "Зайти в любоую папку");
+
+6) В папке app1 cоздано 3 файла txt (1.txt, 2.txt,3.txt) и 2 файла json (4.json, 5.json) (пункт 6 задания "Создать 5 файлов (3 txt, 2 json)");
+
+7) В папке app1 создано три подпапки app11, app12 и app13 (пункт 7 задания "Создать 3 папки");
+
+8) Выведен список содержимого папки app1 (пункт 8 задания "Вывести список содержимого папки");
+
+9) Перемещено два файла (2.txt, 3.txt) из папки app1 в папку app2 (пункт 13 задания "Переместить любые 2 файла, которые вы создали, в любую другую папку");
+
+10)Выведен список содержимого папок app1 и app2 (повторно пункт 8 задания "Вывести список содержимого папки");
+
+11)Выведено сообщение на экран 'Finish'.
+
+
+That's it!
+
+
+Thank you, Mentor, for your help and patience!
